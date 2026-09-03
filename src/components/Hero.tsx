@@ -16,8 +16,6 @@ export default function Hero() {
           alt="خلفية الملتقى"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-950/45 via-primary-900/35 to-primary-950/60" />
-        <div className="absolute inset-0 pattern-dots opacity-15" />
       </div>
 
       {/* Decorative shapes */}
@@ -32,23 +30,29 @@ export default function Hero() {
           <span className="text-white/90 text-sm font-medium">برعاية اتحاد أصحاب العمل</span>
         </div>
 
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight animate-fade-in-up">
-          ملتقى الخرطوم
-          <br />
-          <span className="text-secondary-400">للتعافي الاقتصادي</span>
-        </h1>
+        <div className="relative max-w-4xl mx-auto px-6 sm:px-10 py-7">
+          <div className="absolute inset-0 rounded-[2rem] bg-black/20 backdrop-blur-[1px] shadow-[0_20px_70px_rgba(0,0,0,0.15)]" />
 
-        <p className="mt-6 text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          تحويل التحديات المعيشية إلى فرص للتعافي والتمكين الاجتماعي والاقتصادي والصناعي
-          <br />
-          من خلال شراكات تمويلية ومشاريع طاقة ومياه واستدامة للخدمات الأساسية.
-        </p>
+          <div className="relative">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight animate-fade-in-up">
+              ملتقى الخرطوم
+              <br />
+              <span className="text-secondary-400">للتعافي الاقتصادي</span>
+            </h1>
 
-        {/* Organizers */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-primary-100/80 text-sm animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-          <span>تنظيم فاس التنموية</span>
-          <span className="w-1 h-1 rounded-full bg-primary-300" />
-          <span>مركز إلهام للدراسات الاستراتيجية</span>
+            <p className="mt-6 text-lg sm:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              تحويل التحديات المعيشية إلى فرص للتعافي والتمكين الاجتماعي والاقتصادي والصناعي
+              <br />
+              من خلال شراكات تمويلية ومشاريع طاقة ومياه واستدامة للخدمات الأساسية.
+            </p>
+
+            {/* Organizers */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/85 text-sm animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <span>تنظيم فاس التنموية</span>
+              <span className="w-1 h-1 rounded-full bg-primary-300" />
+              <span>مركز إلهام للدراسات الاستراتيجية</span>
+            </div>
+          </div>
         </div>
 
         {/* CTAs */}
