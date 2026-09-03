@@ -45,7 +45,7 @@ export default function Initiatives() {
             <LightbulbIcon />
             البعد العملي
           </div>
-          <h2 className="section-title">المبادرات القابلة للتنفيذ</h2>
+          <h2 className="section-title">المبادرات التنموية</h2>
           <p className="section-subtitle">
             الهدف من الملتقى ليس إصدار توصيات عامة فقط، بل الخروج بمبادرات قابلة للتنفيذ على أرض الواقع.
           </p>
