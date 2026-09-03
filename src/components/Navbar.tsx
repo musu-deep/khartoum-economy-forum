@@ -4,7 +4,6 @@ import { Menu, X, CalendarDays, MapPin } from 'lucide-react';
 const navItems = [
   { label: 'الرئيسية', href: '#home' },
   { label: 'عن الملتقى', href: '#about' },
-  { label: 'المحاور', href: '#themes' },
   { label: 'الأوراق', href: '#papers' },
   { label: 'المبادرات', href: '#initiatives' },
   { label: 'ورشة الطاقة', href: '#solar' },
