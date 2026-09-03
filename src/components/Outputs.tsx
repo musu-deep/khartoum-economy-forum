@@ -68,7 +68,7 @@ export default function Outputs() {
                 <div className="w-16 h-16 rounded-2xl bg-secondary-500/15 border border-secondary-400/20 flex items-center justify-center mb-7">
                   <CalendarCheck2 className="w-8 h-8 text-secondary-300" />
                 </div>
-                <h4 className="font-display text-2xl font-bold text-white mb-4">وثيقة تُبنى على نتائج الحوار</h4>
+                <h4 className="font-display text-2xl font-bold text-white mb-4">وثيقة مخرجات الملتقى</h4>
                 <p className="text-primary-100 text-base leading-loose">
                   تُصاغ الوثيقة الختامية عقب اكتمال جلسات الملتقى ومداولاته، بما يعكس ما تنتهي إليه
                   الأوراق والنقاشات والتوافقات المؤسسية، ثم تُراجع وتُنشر بوصفها المرجعية الرسمية
