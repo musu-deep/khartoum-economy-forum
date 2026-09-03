@@ -55,13 +55,13 @@ export default function Hero() {
 
         <div className="grid lg:grid-cols-[1.25fr_0.75fr] items-center gap-6 lg:gap-10 max-w-7xl mx-auto">
           <div className="relative px-6 sm:px-10 py-7 lg:text-right">
-            <div className="absolute inset-0 rounded-[2rem] bg-black/20 backdrop-blur-[1px] shadow-[0_20px_70px_rgba(0,0,0,0.15)]" />
+            <div className="absolute inset-0 rounded-[2rem] bg-black/30 backdrop-blur-[2px] shadow-[0_20px_70px_rgba(0,0,0,0.2)]" />
 
             <div className="relative">
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight animate-fade-in-up">
                 ملتقى الخرطوم
                 <br />
-                <span className="text-secondary-400">للتعافي الاقتصادي</span>
+                <span className="text-[#38e0c1]">للتعافي الاقتصادي</span>
               </h1>
 
               <p className="mt-6 text-lg sm:text-xl text-white/95 max-w-3xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -80,7 +80,7 @@ export default function Hero() {
           </div>
 
           {/* Countdown */}
-          <div className="relative px-5 py-7 rounded-[2rem] bg-black/25 backdrop-blur-[2px] border border-white/15 shadow-[0_20px_70px_rgba(0,0,0,0.18)] animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
+          <div className="relative px-5 py-7 rounded-[2rem] bg-black/[0.35] backdrop-blur-[3px] border border-white/20 shadow-[0_20px_70px_rgba(0,0,0,0.24)] animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
             <div className="text-secondary-400 text-sm font-semibold tracking-wide">موعدنا المرتقب</div>
             <div className="mt-2 text-2xl sm:text-3xl font-bold text-white font-display">٤ أكتوبر ٢٠٢٦</div>
             <div className="mt-6 grid grid-cols-4 gap-2" dir="rtl">
