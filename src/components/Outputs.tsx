@@ -1,21 +1,12 @@
-import { FileText, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { FileText, ArrowLeft, CheckCircle2, CalendarCheck2 } from 'lucide-react';
 
 const outputs = [
-  'الأسواق المخفضة',
-  'التشغيل',
-  'الحاضنات',
-  'التمويل',
-  'الطاقة الشمسية',
-  'دعم الإنتاج المحلي',
-];
-
-const documentSteps = [
-  { label: 'المشكلة', color: 'bg-error-500' },
-  { label: 'الحل', color: 'bg-primary-500' },
-  { label: 'الجهة المسؤولة', color: 'bg-accent-500' },
-  { label: 'الشركاء', color: 'bg-secondary-500' },
-  { label: 'آلية التمويل', color: 'bg-primary-600' },
-  { label: 'الخطوة التالية', color: 'bg-accent-600' },
+  { title: 'وثيقة السياسات والتوصيات المعتمدة', description: 'مرجعية مؤسسية توحّد اتجاهات التعافي الاقتصادي.' },
+  { title: 'مصفوفة الأولويات والقرارات التنفيذية', description: 'ترتيب التدخلات وفق الأهمية والجاهزية والأثر.' },
+  { title: 'محفظة المبادرات والمشروعات', description: 'مسارات عملية قابلة للتطوير والتنفيذ والشراكة.' },
+  { title: 'إطار الشراكات والتمويل المؤسسي', description: 'ربط المبادرات بالجهات الداعمة والأدوات التمويلية المناسبة.' },
+  { title: 'منظومة الحوكمة والمتابعة', description: 'آلية واضحة للمسؤوليات والمتابعة وقياس النتائج.' },
+  { title: 'برنامج العمل لما بعد الملتقى', description: 'مسار زمني يحافظ على الزخم وينقل المخرجات إلى التنفيذ.' },
 ];
 
 export default function Outputs() {
@@ -35,7 +26,7 @@ export default function Outputs() {
             مخرجات الملتقى
           </h2>
           <p className="text-lg text-primary-100 leading-relaxed mt-4 max-w-2xl mx-auto">
-            استثمار الملتقى لإطلاق مسارات عمل مستمرة: «من الملتقى إلى المبادرة»
+            مخرجات مؤسسية تنقل الحوار من منصة الملتقى إلى مسارات القرار والتنفيذ والمتابعة
           </p>
         </div>
 
@@ -44,7 +35,7 @@ export default function Outputs() {
           <div>
             <h3 className="font-display text-xl font-bold text-white mb-6 flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-secondary-400" />
-              المبادرات المتابعة للتنفيذ
+              المخرجات المؤسسية المستهدفة
             </h3>
             <div className="space-y-3">
               {outputs.map((item, i) => (
@@ -55,9 +46,10 @@ export default function Outputs() {
                   <span className="w-8 h-8 rounded-lg bg-secondary-500/20 flex items-center justify-center text-secondary-300 font-bold text-sm flex-shrink-0">
                     {['١', '٢', '٣', '٤', '٥', '٦'][i]}
                   </span>
-                  <span className="text-white font-medium group-hover:text-secondary-300 transition-colors">
-                    {item}
-                  </span>
+                  <div>
+                    <div className="text-white font-semibold group-hover:text-secondary-300 transition-colors">{item.title}</div>
+                    <div className="text-primary-100/65 text-xs mt-1 leading-relaxed">{item.description}</div>
+                  </div>
                   <ArrowLeft className="w-4 h-4 text-primary-400 mr-auto group-hover:text-secondary-400 group-hover:-translate-x-1 transition-all" />
                 </div>
               ))}
@@ -68,25 +60,24 @@ export default function Outputs() {
           <div>
             <h3 className="font-display text-xl font-bold text-white mb-6 flex items-center gap-2">
               <FileText className="w-5 h-5 text-secondary-400" />
-              وثيقة المخرجات والتوصيات العملية
+              الوثيقة الختامية للملتقى
             </h3>
-            <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6">
-              <p className="text-primary-100 text-sm leading-relaxed mb-6">
-                يصدر عن الملتقى وثيقة تتضمن لكل توصية المسار التالي:
-              </p>
-              <div className="space-y-3">
-                {documentSteps.map((step, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className={`w-2.5 h-2.5 rounded-full ${step.color} flex-shrink-0`} />
-                    <div className="flex-1 h-px bg-white/10" />
-                    <span className="text-white/90 text-sm font-medium">{step.label}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 p-4 rounded-xl bg-gradient-to-r from-secondary-500/10 to-primary-500/10 border border-secondary-400/20">
-                <p className="text-secondary-200 text-sm font-medium text-center">
-                  مسار متكامل من المشكلة إلى الخطوة التالية
+            <div className="relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-8 min-h-[25rem] flex flex-col justify-center">
+              <div className="absolute -top-20 -left-20 w-56 h-56 rounded-full bg-secondary-400/10 blur-3xl" />
+              <div className="relative">
+                <div className="w-16 h-16 rounded-2xl bg-secondary-500/15 border border-secondary-400/20 flex items-center justify-center mb-7">
+                  <CalendarCheck2 className="w-8 h-8 text-secondary-300" />
+                </div>
+                <h4 className="font-display text-2xl font-bold text-white mb-4">وثيقة تُبنى على نتائج الحوار</h4>
+                <p className="text-primary-100 text-base leading-loose">
+                  تُصاغ الوثيقة الختامية عقب اكتمال جلسات الملتقى ومداولاته، بما يعكس ما تنتهي إليه
+                  الأوراق والنقاشات والتوافقات المؤسسية، ثم تُراجع وتُنشر بوصفها المرجعية الرسمية
+                  لمخرجات الملتقى ومسارات العمل اللاحقة.
                 </p>
+                <div className="mt-8 pt-6 border-t border-white/10 flex items-center gap-3 text-secondary-200">
+                  <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+                  <span className="text-sm font-semibold">يتم نشر الوثيقة عقب جلسات الملتقى</span>
+                </div>
               </div>
             </div>
           </div>
