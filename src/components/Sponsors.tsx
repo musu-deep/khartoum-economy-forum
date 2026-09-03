@@ -2,7 +2,7 @@ import { Building, Award } from 'lucide-react';
 
 const mainSponsors = [
   { label: 'الراعي', name: 'اتحاد أصحاب العمل', icon: Award, color: 'from-primary-600 to-primary-800' },
-  { label: 'المنظّم', name: 'فاس التنموية', icon: Building, color: 'from-accent-600 to-accent-800' },
+  { label: 'المنظّم', name: 'مجموعة فاس التنموية', icon: Building, color: 'from-accent-600 to-accent-800' },
   { label: 'المنظّم', name: 'مركز إلهام للدراسات الاستراتيجية', icon: Building, color: 'from-secondary-500 to-secondary-700' },
 ];
 
