@@ -85,7 +85,7 @@ export default function Initiatives() {
             <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
               <ArrowLeft className="w-7 h-7 text-secondary-400" />
             </div>
-            <h3 className="font-display text-xl font-bold mb-3">من الملتقى إلى المبادرة</h3>
+            <h3 className="font-display text-xl font-bold mb-3">حاضنة مبادرات</h3>
             <p className="text-primary-100 text-sm leading-relaxed mb-5">
               يتم اختيار عدد من المبادرات ومتابعة تنفيذها بعد الفعالية، ويصدر عن الملتقى وثيقة مخرجات وتوصيات عملية.
             </p>
