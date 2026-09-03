@@ -16,8 +16,8 @@ export default function Hero() {
           alt="خلفية الملتقى"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-950/85 via-primary-900/80 to-primary-950/90" />
-        <div className="absolute inset-0 pattern-dots opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-950/45 via-primary-900/35 to-primary-950/60" />
+        <div className="absolute inset-0 pattern-dots opacity-15" />
       </div>
 
       {/* Decorative shapes */}
