@@ -33,11 +33,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="text-primary-100">
                 <span className="text-primary-300">الراعي: </span>
-                اتحاد أصحاب العمل
+                اتحاد أصحاب العمل السوداني
               </li>
               <li className="text-primary-100">
                 <span className="text-primary-300">المنظّم: </span>
-                فاس التنموية
+                مجموعة فاس التنموية
               </li>
               <li className="text-primary-100">
                 <span className="text-primary-300">المنظّم: </span>
@@ -52,7 +52,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3 text-primary-100">
                 <CalendarDays className="w-5 h-5 text-secondary-400 flex-shrink-0" />
-                <span>نهاية سبتمبر أو بداية أكتوبر ٢٠٢٦</span>
+                <span>الأسبوع الأول من أكتوبر ٢٠٢٦</span>
               </li>
               <li className="flex items-center gap-3 text-primary-100">
                 <MapPin className="w-5 h-5 text-secondary-400 flex-shrink-0" />
@@ -60,11 +60,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-primary-100">
                 <Mail className="w-5 h-5 text-secondary-400 flex-shrink-0" />
-                <span>info@khartoum-forum.sd</span>
+                <span>info@sudabizhub.org</span>
               </li>
               <li className="flex items-center gap-3 text-primary-100">
                 <Phone className="w-5 h-5 text-secondary-400 flex-shrink-0" />
-                <span dir="ltr">+249 1xx xxx xxx</span>
+                <span dir="ltr">+249 123009001</span>
               </li>
             </ul>
           </div>
