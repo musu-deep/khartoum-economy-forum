@@ -1,6 +1,6 @@
 import { CalendarDays, MapPin, ArrowLeft, Users, Lightbulb, Handshake } from 'lucide-react';
 
-const heroImage = 'https://images.pexels.com/photos/15745290/pexels-photo-15745290.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop';
+const heroImage = '/images/khartoum-cinematic-hero.webp';
 
 export default function Hero() {
   const scrollTo = (href: string) => {
@@ -35,7 +35,7 @@ export default function Hero() {
         <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight animate-fade-in-up">
           ملتقى الخرطوم
           <br />
-          <span className="gradient-text">للتعافي الاقتصادي</span>
+          <span className="text-secondary-400">للتعافي الاقتصادي</span>
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
