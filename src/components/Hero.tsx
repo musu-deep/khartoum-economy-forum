@@ -1,8 +1,31 @@
+import { useEffect, useState } from 'react';
 import { CalendarDays, MapPin, ArrowLeft, Users, Lightbulb, Handshake } from 'lucide-react';
 
 const heroImage = '/images/khartoum-cinematic-hero.webp';
+const eventDate = new Date('2026-10-04T09:00:00+03:00').getTime();
+
+const getTimeLeft = () => {
+  const distance = Math.max(0, eventDate - Date.now());
+
+  return {
+    days: Math.floor(distance / 86400000),
+    hours: Math.floor((distance / 3600000) % 24),
+    minutes: Math.floor((distance / 60000) % 60),
+    seconds: Math.floor((distance / 1000) % 60),
+  };
+};
+
+const formatNumber = (value: number) =>
+  new Intl.NumberFormat('ar-EG', { minimumIntegerDigits: 2, useGrouping: false }).format(value);
 
 export default function Hero() {
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setTimeLeft(getTimeLeft()), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
+
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -30,28 +53,50 @@ export default function Hero() {
           <span className="text-white/90 text-sm font-medium">برعاية اتحاد أصحاب العمل</span>
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-6 sm:px-10 py-7">
-          <div className="absolute inset-0 rounded-[2rem] bg-black/20 backdrop-blur-[1px] shadow-[0_20px_70px_rgba(0,0,0,0.15)]" />
+        <div className="grid lg:grid-cols-[1.25fr_0.75fr] items-center gap-6 lg:gap-10 max-w-7xl mx-auto">
+          <div className="relative px-6 sm:px-10 py-7 lg:text-right">
+            <div className="absolute inset-0 rounded-[2rem] bg-black/20 backdrop-blur-[1px] shadow-[0_20px_70px_rgba(0,0,0,0.15)]" />
 
-          <div className="relative">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight animate-fade-in-up">
-              ملتقى الخرطوم
-              <br />
-              <span className="text-secondary-400">للتعافي الاقتصادي</span>
-            </h1>
+            <div className="relative">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight animate-fade-in-up">
+                ملتقى الخرطوم
+                <br />
+                <span className="text-secondary-400">للتعافي الاقتصادي</span>
+              </h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              تحويل التحديات المعيشية إلى فرص للتعافي والتمكين الاجتماعي والاقتصادي والصناعي
-              <br />
-              من خلال شراكات تمويلية ومشاريع طاقة ومياه واستدامة للخدمات الأساسية.
-            </p>
+              <p className="mt-6 text-lg sm:text-xl text-white/95 max-w-3xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                تحويل التحديات المعيشية إلى فرص للتعافي والتمكين الاجتماعي والاقتصادي والصناعي
+                <br />
+                من خلال شراكات تمويلية ومشاريع طاقة ومياه واستدامة للخدمات الأساسية.
+              </p>
 
-            {/* Organizers */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-white/85 text-sm animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <span>تنظيم فاس التنموية</span>
-              <span className="w-1 h-1 rounded-full bg-primary-300" />
-              <span>مركز إلهام للدراسات الاستراتيجية</span>
+              {/* Organizers */}
+              <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-white/85 text-sm animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <span>تنظيم فاس التنموية</span>
+                <span className="w-1 h-1 rounded-full bg-primary-300" />
+                <span>مركز إلهام للدراسات الاستراتيجية</span>
+              </div>
             </div>
+          </div>
+
+          {/* Countdown */}
+          <div className="relative px-5 py-7 rounded-[2rem] bg-black/25 backdrop-blur-[2px] border border-white/15 shadow-[0_20px_70px_rgba(0,0,0,0.18)] animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
+            <div className="text-secondary-400 text-sm font-semibold tracking-wide">موعدنا المرتقب</div>
+            <div className="mt-2 text-2xl sm:text-3xl font-bold text-white font-display">٤ أكتوبر ٢٠٢٦</div>
+            <div className="mt-6 grid grid-cols-4 gap-2" dir="rtl">
+              {[
+                { value: timeLeft.days, label: 'يوم' },
+                { value: timeLeft.hours, label: 'ساعة' },
+                { value: timeLeft.minutes, label: 'دقيقة' },
+                { value: timeLeft.seconds, label: 'ثانية' },
+              ].map((unit) => (
+                <div key={unit.label} className="rounded-2xl bg-white/10 border border-white/15 px-2 py-4">
+                  <div className="text-3xl sm:text-4xl xl:text-5xl font-bold text-white tabular-nums leading-none">{formatNumber(unit.value)}</div>
+                  <div className="mt-2 text-xs sm:text-sm text-white/75">{unit.label}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 text-sm text-white/75">حتى انطلاق ملتقى الخرطوم للتعافي الاقتصادي</div>
           </div>
         </div>
 
@@ -90,7 +135,7 @@ export default function Hero() {
         <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-primary-100/90 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="flex items-center gap-2">
             <CalendarDays className="w-5 h-5 text-secondary-400" />
-            <span className="font-medium">نهاية سبتمبر أو بداية أكتوبر ٢٠٢٦</span>
+            <span className="font-medium">٤ أكتوبر ٢٠٢٦</span>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-secondary-400" />
