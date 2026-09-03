@@ -39,9 +39,9 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          كيف نخفّف أعباء المعيشة ونزيد قدرة الأسرة على مواجهة الظروف الاقتصادية؟
+          تحويل التحديات المعيشية إلى فرص للتعافي والتمكين الاجتماعي والاقتصادي والصناعي
           <br />
-          ملتقى ينطلق من قضية مباشرة تمسّ المواطن، نحو منظومة متكاملة للتعافي.
+          من خلال شراكات تمويلية ومشاريع طاقة ومياه واستدامة للخدمات الأساسية.
         </p>
 
         {/* Organizers */}
