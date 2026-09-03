@@ -69,11 +69,9 @@ export default function About() {
             <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
               <Target className="w-7 h-7 text-primary-600 group-hover:text-white transition-colors duration-300" />
             </div>
-            <h3 className="font-display text-2xl font-bold text-primary-900 mb-4">الرسالة</h3>
+            <h3 className="font-display text-2xl font-bold text-primary-900 mb-4">الرؤية</h3>
             <p className="text-stone-600 leading-relaxed">
-              الانطلاق من قضية مباشرة تمسّ المواطن: كيف نخفّف أعباء المعيشة ونزيد قدرة الأسرة
-              على مواجهة الظروف الاقتصادية، عبر سياسات ممكنة وشراكات فاعلة ومشروعات إنتاجية
-              قابلة للتنفيذ والقياس والاستدامة.
+              نحو تعزيز القيمة والأثر الاجتماعي والاقتصادي للمؤسسات والقطاعات الإنتاجية والصناعية ودورها في التعافي 
             </p>
           </div>
 
@@ -81,10 +79,12 @@ export default function About() {
             <div className="w-14 h-14 rounded-2xl bg-secondary-100 flex items-center justify-center mb-6 group-hover:bg-secondary-500 transition-colors duration-300">
               <Eye className="w-7 h-7 text-secondary-600 group-hover:text-white transition-colors duration-300" />
             </div>
-            <h3 className="font-display text-2xl font-bold text-primary-900 mb-4">الرؤية</h3>
+            
+            <h3 className="font-display text-2xl font-bold text-primary-900 mb-4">الرسالة</h3>
             <p className="text-stone-600 leading-relaxed">
-              تحويل الملتقى إلى منصة قيادة مستمرة تنقل الأوراق من المعرفة إلى القرار، ومن القرار
-              إلى محافظ مشروعات، ضمن حوكمة تحدد المسؤوليات والتمويل ومؤشرات الأثر والخطوة التالية.
+              بحث آليات تلبية الاحتياجات المباشرة التي تمسّ المواطن وتخفيف أعباء المعيشة وزيادة قدرة الأسرة
+              على مواجهة الظروف الاقتصادية، عبر سياسات ممكنة وشراكات فاعلة ومشروعات إنتاجية
+              قابلة للتنفيذ والقياس والاستدامة.
             </p>
           </div>
         </div>
