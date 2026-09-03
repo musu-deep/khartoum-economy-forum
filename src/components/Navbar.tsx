@@ -42,9 +42,11 @@ export default function Navbar() {
           onClick={() => handleNav('#home')}
           className="flex items-center gap-3 cursor-pointer"
         >
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center shadow-lg shadow-primary-600/20">
-            <span className="font-display text-white font-bold text-lg">خ</span>
-          </div>
+          <img
+            src="/images/forum-logo-mark.png"
+            alt="شعار ملتقى الخرطوم للتعافي الاقتصادي"
+            className="w-12 h-12 object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]"
+          />
           <div className="text-right">
             <div
               className={`font-display font-bold text-sm leading-tight ${

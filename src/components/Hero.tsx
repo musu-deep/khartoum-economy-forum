@@ -58,6 +58,11 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-[2rem] bg-black/30 backdrop-blur-[2px] shadow-[0_20px_70px_rgba(0,0,0,0.2)]" />
 
             <div className="relative">
+              <img
+                src="/images/forum-logo-mark.png"
+                alt="شعار ملتقى الخرطوم للتعافي الاقتصادي"
+                className="w-24 sm:w-28 lg:w-32 h-auto object-contain mx-auto lg:mx-0 mb-4 drop-shadow-[0_8px_24px_rgba(0,0,0,0.35)] animate-fade-in-up"
+              />
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight animate-fade-in-up">
                 ملتقى الخرطوم
                 <br />

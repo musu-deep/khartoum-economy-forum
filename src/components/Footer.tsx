@@ -12,15 +12,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-                <span className="font-display text-white font-bold text-xl">خ</span>
-              </div>
-              <div>
-                <div className="font-display font-bold text-lg">ملتقى الخرطوم</div>
-                <div className="text-sm text-primary-200">للتعافي الاقتصادي</div>
-              </div>
-            </div>
+            <img
+              src="/images/forum-logo-full.png"
+              alt="ملتقى الخرطوم للتعافي الاقتصادي"
+              className="w-52 sm:w-60 h-auto object-contain mb-6 drop-shadow-[0_8px_24px_rgba(0,0,0,0.25)]"
+            />
             <p className="text-primary-200 text-sm leading-relaxed">
               ملتقى ينطلق من قضية مباشرة تمسّ المواطن: كيف نخفّف أعباء المعيشة ونزيد قدرة الأسرة
               على مواجهة الظروف الاقتصادية.
