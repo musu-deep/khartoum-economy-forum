@@ -50,7 +50,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8 animate-fade-in-down">
           <span className="w-2 h-2 rounded-full bg-secondary-400 animate-pulse" />
-          <span className="text-white/90 text-sm font-medium">برعاية اتحاد أصحاب العمل</span>
+          <span className="text-white/90 text-sm font-medium">برعاية اتحاد أصحاب العمل السوداني</span>
         </div>
 
         <div className="grid lg:grid-cols-[1.25fr_0.75fr] items-center gap-6 lg:gap-10 max-w-7xl mx-auto">
@@ -77,7 +77,7 @@ export default function Hero() {
 
               {/* Organizers */}
               <div className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-white/85 text-sm animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                <span>تنظيم فاس التنموية</span>
+                <span>تنظيم مجموعة فاس التنموية</span>
                 <span className="w-1 h-1 rounded-full bg-primary-300" />
                 <span>مركز إلهام للدراسات الاستراتيجية</span>
               </div>
