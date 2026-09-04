@@ -122,7 +122,7 @@ export default function Hero() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           {[
-            { icon: Users, value: '+٥٠٠', label: 'مشارك متوقع' },
+            { icon: Users, value: '١٥٠', label: 'مشارك متوقع' },
             { icon: Lightbulb, value: '٦', label: 'مبادرات قابلة للتنفيذ' },
             { icon: Handshake, value: '+٢٠', label: 'جهة شريكة' },
           ].map((stat, i) => (
